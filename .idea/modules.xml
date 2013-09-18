@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SAOLauncher/SAOLauncher.iml" filepath="$PROJECT_DIR$/SAOLauncher/SAOLauncher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SAOLauncherProject.iml" filepath="$PROJECT_DIR$/SAOLauncherProject.iml" />
+    </modules>
+  </component>
+</project>
+
