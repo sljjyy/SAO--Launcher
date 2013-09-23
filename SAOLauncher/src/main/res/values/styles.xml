@@ -17,4 +17,9 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <style name="SAOTheme" parent="android:Theme.Wallpaper">
+        <!-- windowNoTitle设置为true，去掉标题栏 -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
 </resources>
