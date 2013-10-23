@@ -16,9 +16,12 @@ public class MainMenu {
 
     public final static MainMenu SYSTEM;
     public final static MainMenu PHONE;
+    public final static MainMenu APPLS;
+
     static {
         SYSTEM = new MainMenu(0,0,"System", R.drawable.system_hover,R.drawable.system_normal);
         PHONE = new MainMenu(1,1,"Phone",R.drawable.phone_hover,R.drawable.phone_normal);
+        APPLS = new MainMenu(2,2,"App List",R.drawable.android_hover,R.drawable.android_normal);
     }
 
     public MainMenu() {

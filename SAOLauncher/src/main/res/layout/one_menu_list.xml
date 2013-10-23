@@ -5,9 +5,14 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
     <ListView
-    android:id="@+id/layout_one_menu"
-    android:layout_width="64dp"
-    android:layout_height="wrap_content"
-    android:listSelector="@drawable/one_menu_bg">
+        android:id="@android:id/list"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="true"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@drawable/one_menu_bg"
+        android:divider="@null"
+        android:layoutAnimation="@anim/layout_anim_ation"
+    >
     </ListView>
 </LinearLayout>

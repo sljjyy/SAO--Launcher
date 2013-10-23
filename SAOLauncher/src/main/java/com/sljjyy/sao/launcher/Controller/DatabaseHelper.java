@@ -1,4 +1,4 @@
-package com.sljjyy.sao.launcher.Controller;
+package com.sljjyy.sao.launcher.controller;
 
 import android.content.ContentValues;
 import android.content.Context;
