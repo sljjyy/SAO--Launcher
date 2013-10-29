@@ -1,13 +1,12 @@
 package com.sljjyy.sao.launcher.view;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.LayoutAnimationController;
-import android.view.animation.TranslateAnimation;
+import android.util.Log;
+import android.view.WindowManager;
 
+import com.sljjyy.sao.launcher.MainActivity;
 import com.sljjyy.sao.launcher.controller.OneMenuAdapter;
 import com.sljjyy.sao.launcher.R;
 import com.sljjyy.sao.launcher.model.MainMenu;
@@ -23,12 +22,22 @@ public class MainMenuActivity extends ListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getWindow().setAttributes(initCoord());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.one_menu_list);
 //        final DatabaseHelper helpter = new DatabaseHelper(this);
         oneMenuAdapter = new OneMenuAdapter(this, getData());
         setListAdapter(oneMenuAdapter);
 
+    }
+
+    private WindowManager.LayoutParams initCoord(){
+        WindowManager.LayoutParams params = getWindow().getAttributes();
+        Intent intent = getIntent();
+        params.x = intent.getIntExtra("coord_x", 0) - MainActivity.width / 2;
+        params.y = intent.getIntExtra("coord_y", 0) - MainActivity.height / 2;
+        Log.e("tag", "x,y = " + params.x + "," + params.y);
+        return params;
     }
 
     private ArrayList<MainMenu> getData(){
